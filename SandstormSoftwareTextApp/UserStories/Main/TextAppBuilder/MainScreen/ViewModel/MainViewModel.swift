@@ -8,7 +8,21 @@
 import Foundation
 
 final class MainViewModel: ObservableObject {
-    @Published var isBlocked: Bool = false
+    @Published var isOpenFromTopButtonDisabled = false
+    @Published var isDetailViewFromTopPresented = false
+    @Published var isDetailViewFullPresented = false
+    
+    func toggleLock() {
+        isOpenFromTopButtonDisabled.toggle()
+    }
+    
+    func openDetailViewFromTop() {
+        isDetailViewFromTopPresented.toggle()
+    }
+    
+    func openDetailViewFull() {
+        isDetailViewFullPresented.toggle()
+    }
     
     
 }

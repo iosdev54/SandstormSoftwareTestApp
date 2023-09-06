@@ -14,11 +14,19 @@ private extension Constants {
     static let buttonCornerRadius: CGFloat = 18
     static let buttonStrokeColor: Color = .indigo
     static let buttonStrokeLineWidth: CGFloat = 3
+    static let isDisabledOpacity: CGFloat = 0.5
 }
 
 struct CustomButtonView: View {
     let title: String
+    let isDisabled: Bool
     let action: () -> Void
+    
+    init(title: String, isDisabled: Bool = false, action: @escaping () -> Void) {
+        self.title = title
+        self.isDisabled = isDisabled
+        self.action = action
+    }
     
     var body: some View {
         Button(action: action) {
@@ -33,6 +41,8 @@ struct CustomButtonView: View {
                         .stroke(Constants.buttonStrokeColor, lineWidth: Constants.buttonStrokeLineWidth)
                 )
         }
+        .disabled(isDisabled)
+        .opacity(isDisabled ? Constants.isDisabledOpacity : 1)
     }
 }
 

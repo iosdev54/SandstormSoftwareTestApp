@@ -12,27 +12,67 @@ private extension Constants {
     static let padding: CGFloat = 20
 }
 
+struct SlideInFromTopTransition: ViewModifier {
+    var offsetY: CGFloat = -UIScreen.main.bounds.height
+    
+    func body(content: Content) -> some View {
+        content
+            .offset(y: offsetY)
+            .animation(.easeInOut, value: offsetY)
+    }
+}
+
+extension AnyTransition {
+    static var slideInFromTop: AnyTransition {
+        AnyTransition.modifier(
+            active: SlideInFromTopTransition(),
+            identity: SlideInFromTopTransition(offsetY: 0)
+        )
+    }
+}
+
 struct MainView: View {
+    @StateObject private var viewModel = MainViewModel()
+    
+    private var lockButtonTitle: String {
+        viewModel.isOpenFromTopButtonDisabled ? "Unlock" : "Lock"
+    }
+    
     var body: some View {
-        GeometryReader { proxy in
-            VStack(spacing: Constants.spacing) {
-                Constants.pandaImage
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 150, height: proxy.size.height * 0.3, alignment: .leading)
-                    .clipped()
-                
-                HStack(spacing: Constants.spacing) {
-                    CustomButtonView(title: "Lock", action: {})
+        ZStack {
+            GeometryReader { proxy in
+                VStack {
+                    Constants.pandaImage
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 150, height: proxy.size.height * 0.3, alignment: .leading)
+                        .clipped()
                     
-                    CustomButtonView(title: "Open from top", action: {})
+                    HStack(spacing: Constants.spacing) {
+                        CustomButtonView(title: lockButtonTitle, action: viewModel.toggleLock)
+                        
+                        CustomButtonView(title: "Open from top", isDisabled: viewModel.isOpenFromTopButtonDisabled, action: viewModel.openDetailViewFromTop)
+                    }
+                    
+                    Spacer()
+                    
+                    CustomButtonView(title: "Open full", action: viewModel.openDetailViewFull)
                 }
-                Spacer()
-                
-                CustomButtonView(title: "Open full", action: {})
+            }
+            .padding(.horizontal, Constants.padding)
+            
+            if viewModel.isDetailViewFromTopPresented {
+                DetailView(isDetailViewPresented: $viewModel.isDetailViewFromTopPresented)
+                    .transition(.slideInFromTop)
+                    .edgesIgnoringSafeArea(.all)
+            }
+            
+            if viewModel.isDetailViewFullPresented {
+                DetailView(isDetailViewPresented: $viewModel.isDetailViewFullPresented)
+                    .transition(.move(edge: .bottom))
+                    .edgesIgnoringSafeArea(.all)
             }
         }
-        .padding(.horizontal, Constants.padding)
     }
 }
 
