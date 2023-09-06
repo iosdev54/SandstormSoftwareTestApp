@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		1837581A2AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183758192AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift */; };
-		1837581C2AA8888900C5A005 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837581B2AA8888900C5A005 /* ContentView.swift */; };
 		1837581E2AA8888B00C5A005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1837581D2AA8888B00C5A005 /* Assets.xcassets */; };
 		183758212AA8888B00C5A005 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183758202AA8888B00C5A005 /* Preview Assets.xcassets */; };
+		1837582E2AA889A600C5A005 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837582D2AA889A600C5A005 /* MainView.swift */; };
+		183758322AA88DCD00C5A005 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183758312AA88DCD00C5A005 /* MainViewModel.swift */; };
+		183758342AA88F5500C5A005 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183758332AA88F5500C5A005 /* CustomButtonView.swift */; };
+		183758372AA890BC00C5A005 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183758362AA890BC00C5A005 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		183758162AA8888900C5A005 /* SandstormSoftwareTextApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandstormSoftwareTextApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		183758192AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandstormSoftwareTextAppApp.swift; sourceTree = "<group>"; };
-		1837581B2AA8888900C5A005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1837581D2AA8888B00C5A005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		183758202AA8888B00C5A005 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1837582D2AA889A600C5A005 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		183758312AA88DCD00C5A005 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		183758332AA88F5500C5A005 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		183758362AA890BC00C5A005 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +57,9 @@
 		183758182AA8888900C5A005 /* SandstormSoftwareTextApp */ = {
 			isa = PBXGroup;
 			children = (
-				183758192AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift */,
-				1837581B2AA8888900C5A005 /* ContentView.swift */,
-				1837581D2AA8888B00C5A005 /* Assets.xcassets */,
+				183758352AA890AF00C5A005 /* Library */,
+				183758272AA8893500C5A005 /* Main */,
+				183758282AA8893D00C5A005 /* UserStories */,
 				1837581F2AA8888B00C5A005 /* Preview Content */,
 			);
 			path = SandstormSoftwareTextApp;
@@ -65,6 +71,81 @@
 				183758202AA8888B00C5A005 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		183758272AA8893500C5A005 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				183758192AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift */,
+				1837581D2AA8888B00C5A005 /* Assets.xcassets */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		183758282AA8893D00C5A005 /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				183758292AA8896900C5A005 /* Main */,
+			);
+			path = UserStories;
+			sourceTree = "<group>";
+		};
+		183758292AA8896900C5A005 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1837582A2AA8897B00C5A005 /* TextAppBuilder */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1837582A2AA8897B00C5A005 /* TextAppBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				1837582C2AA8898C00C5A005 /* MainScreen */,
+			);
+			path = TextAppBuilder;
+			sourceTree = "<group>";
+		};
+		1837582C2AA8898C00C5A005 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1837582F2AA88DA800C5A005 /* View */,
+				183758302AA88DAE00C5A005 /* ViewModel */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		1837582F2AA88DA800C5A005 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1837582D2AA889A600C5A005 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		183758302AA88DAE00C5A005 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				183758312AA88DCD00C5A005 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		183758352AA890AF00C5A005 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				183758382AA8931100C5A005 /* Components */,
+				183758362AA890BC00C5A005 /* Constants.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		183758382AA8931100C5A005 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				183758332AA88F5500C5A005 /* CustomButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1837581C2AA8888900C5A005 /* ContentView.swift in Sources */,
+				183758372AA890BC00C5A005 /* Constants.swift in Sources */,
+				1837582E2AA889A600C5A005 /* MainView.swift in Sources */,
 				1837581A2AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift in Sources */,
+				183758322AA88DCD00C5A005 /* MainViewModel.swift in Sources */,
+				183758342AA88F5500C5A005 /* CustomButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
