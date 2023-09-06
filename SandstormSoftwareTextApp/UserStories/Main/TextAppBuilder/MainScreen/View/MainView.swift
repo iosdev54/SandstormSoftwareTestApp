@@ -8,6 +8,8 @@
 import SwiftUI
 
 private extension Constants {
+    static let pandaImageWidth: CGFloat = 150
+    static let pandaImageHeightMultiplier: CGFloat = 0.3
     static let spacing: CGFloat = 20
     static let padding: CGFloat = 20
 }
@@ -45,32 +47,38 @@ struct MainView: View {
                     Constants.pandaImage
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 150, height: proxy.size.height * 0.3, alignment: .leading)
+                        .frame(width: Constants.pandaImageWidth, height: proxy.size.height * Constants.pandaImageHeightMultiplier, alignment: .leading)
                         .clipped()
                     
                     HStack(spacing: Constants.spacing) {
                         CustomButtonView(title: lockButtonTitle, action: viewModel.toggleLock)
                         
-                        CustomButtonView(title: "Open from top", isDisabled: viewModel.isOpenFromTopButtonDisabled, action: viewModel.openDetailViewFromTop)
+                        CustomButtonView(title: "Open from top", isDisabled: viewModel.isOpenFromTopButtonDisabled) {
+                            withAnimation {
+                                viewModel.openDetailViewFromTop()
+                            }
+                        }
                     }
                     
                     Spacer()
                     
-                    CustomButtonView(title: "Open full", action: viewModel.openDetailViewFull)
+                    CustomButtonView(title: "Open full") {
+                        withAnimation {
+                            viewModel.isDetailViewFullPresented.toggle()
+                        }
+                    }
                 }
             }
             .padding(.horizontal, Constants.padding)
             
             if viewModel.isDetailViewFromTopPresented {
                 DetailView(isDetailViewPresented: $viewModel.isDetailViewFromTopPresented)
-                    .transition(.slideInFromTop)
-                    .edgesIgnoringSafeArea(.all)
+                    .transition(.move(edge: .top))
             }
             
             if viewModel.isDetailViewFullPresented {
                 DetailView(isDetailViewPresented: $viewModel.isDetailViewFullPresented)
-                    .transition(.move(edge: .bottom))
-                    .edgesIgnoringSafeArea(.all)
+                    .transition(.identity)
             }
         }
     }

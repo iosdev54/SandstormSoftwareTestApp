@@ -18,30 +18,30 @@ private extension Constants {
 struct DetailView: View {
     @Binding var isDetailViewPresented: Bool
     
+    private var dismissButton: some View {
+        Button(action: { isDetailViewPresented = false }) {
+            Circle()
+                .fill(Constants.dismissButtonBackgroundColor)
+                .overlay {
+                    Constants.dismissButtonImage
+                        .foregroundColor(Constants.dismissButtonForegroundColor)
+                }
+        }
+    }
+    
     var body: some View {
-        GeometryReader { proxy in
+        GeometryReader { _ in
             Constants.pandaImage
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: proxy.size.width, height: proxy.size.height + proxy.safeAreaInsets.top + proxy.safeAreaInsets.bottom, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .clipped()
                 .ignoresSafeArea()
-            
-            HStack {
-                Spacer()
-                
-                Button(action: { isDetailViewPresented = false }) {
-                    Circle()
-                        .fill(Constants.dismissButtonBackgroundColor)
-                        .overlay {
-                            Constants.dismissButtonImage
-                                .font(.title2)
-                                .foregroundColor(Constants.dismissButtonForegroundColor)
-                        }
-                }
+        }
+        .overlay(alignment: .topTrailing) {
+            dismissButton
                 .frame(width: Constants.dismissButtonSize, height: Constants.dismissButtonSize)
                 .offset(x: -Constants.dismissButtonPadding)
-            }
         }
     }
 }

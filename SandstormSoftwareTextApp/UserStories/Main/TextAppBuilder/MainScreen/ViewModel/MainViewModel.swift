@@ -23,6 +23,4 @@ final class MainViewModel: ObservableObject {
     func openDetailViewFull() {
         isDetailViewFullPresented.toggle()
     }
-    
-    
 }
