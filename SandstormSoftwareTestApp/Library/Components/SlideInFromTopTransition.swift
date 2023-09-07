@@ -1,6 +1,6 @@
 //
 //  SlideInFromTopTransition.swift
-//  SandstormSoftwareTextApp
+//  SandstormSoftwareTestApp
 //
 //  Created by Dmytro Grytsenko on 07.09.2023.
 //

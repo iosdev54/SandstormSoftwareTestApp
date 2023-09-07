@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1837581A2AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183758192AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift */; };
+		1837581A2AA8888900C5A005 /* SandstormSoftwareTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183758192AA8888900C5A005 /* SandstormSoftwareTestAppApp.swift */; };
 		1837581E2AA8888B00C5A005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1837581D2AA8888B00C5A005 /* Assets.xcassets */; };
 		183758212AA8888B00C5A005 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183758202AA8888B00C5A005 /* Preview Assets.xcassets */; };
 		1837582E2AA889A600C5A005 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837582D2AA889A600C5A005 /* MainView.swift */; };
@@ -16,11 +16,12 @@
 		183758372AA890BC00C5A005 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183758362AA890BC00C5A005 /* Constants.swift */; };
 		1837583E2AA8A74200C5A005 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837583D2AA8A74200C5A005 /* DetailView.swift */; };
 		18FDAFBD2AA9B47200B719A8 /* SlideInFromTopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFBC2AA9B47200B719A8 /* SlideInFromTopTransition.swift */; };
+		18FDAFBF2AA9BB2D00B719A8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFBE2AA9BB2D00B719A8 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		183758162AA8888900C5A005 /* SandstormSoftwareTextApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandstormSoftwareTextApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		183758192AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandstormSoftwareTextAppApp.swift; sourceTree = "<group>"; };
+		183758162AA8888900C5A005 /* SandstormSoftwareTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandstormSoftwareTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		183758192AA8888900C5A005 /* SandstormSoftwareTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandstormSoftwareTestAppApp.swift; sourceTree = "<group>"; };
 		1837581D2AA8888B00C5A005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		183758202AA8888B00C5A005 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1837582D2AA889A600C5A005 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -29,6 +30,7 @@
 		183758362AA890BC00C5A005 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1837583D2AA8A74200C5A005 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		18FDAFBC2AA9B47200B719A8 /* SlideInFromTopTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInFromTopTransition.swift; sourceTree = "<group>"; };
+		18FDAFBE2AA9BB2D00B719A8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +47,8 @@
 		1837580D2AA8888900C5A005 = {
 			isa = PBXGroup;
 			children = (
-				183758182AA8888900C5A005 /* SandstormSoftwareTextApp */,
+				18FDAFBE2AA9BB2D00B719A8 /* .gitignore */,
+				183758182AA8888900C5A005 /* SandstormSoftwareTestApp */,
 				183758172AA8888900C5A005 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,12 +56,12 @@
 		183758172AA8888900C5A005 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				183758162AA8888900C5A005 /* SandstormSoftwareTextApp.app */,
+				183758162AA8888900C5A005 /* SandstormSoftwareTestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		183758182AA8888900C5A005 /* SandstormSoftwareTextApp */ = {
+		183758182AA8888900C5A005 /* SandstormSoftwareTestApp */ = {
 			isa = PBXGroup;
 			children = (
 				183758352AA890AF00C5A005 /* Library */,
@@ -66,7 +69,7 @@
 				183758282AA8893D00C5A005 /* UserStories */,
 				1837581F2AA8888B00C5A005 /* Preview Content */,
 			);
-			path = SandstormSoftwareTextApp;
+			path = SandstormSoftwareTestApp;
 			sourceTree = "<group>";
 		};
 		1837581F2AA8888B00C5A005 /* Preview Content */ = {
@@ -80,7 +83,7 @@
 		183758272AA8893500C5A005 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				183758192AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift */,
+				183758192AA8888900C5A005 /* SandstormSoftwareTestAppApp.swift */,
 				1837581D2AA8888B00C5A005 /* Assets.xcassets */,
 			);
 			path = Main;
@@ -89,18 +92,18 @@
 		183758282AA8893D00C5A005 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
-				1837582A2AA8897B00C5A005 /* TextAppBuilder */,
+				1837582A2AA8897B00C5A005 /* TestAppBuilder */,
 			);
 			path = UserStories;
 			sourceTree = "<group>";
 		};
-		1837582A2AA8897B00C5A005 /* TextAppBuilder */ = {
+		1837582A2AA8897B00C5A005 /* TestAppBuilder */ = {
 			isa = PBXGroup;
 			children = (
 				1837582C2AA8898C00C5A005 /* MainScreen */,
 				183758392AA8A71000C5A005 /* DetailScreen */,
 			);
-			path = TextAppBuilder;
+			path = TestAppBuilder;
 			sourceTree = "<group>";
 		};
 		1837582C2AA8898C00C5A005 /* MainScreen */ = {
@@ -173,9 +176,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		183758152AA8888900C5A005 /* SandstormSoftwareTextApp */ = {
+		183758152AA8888900C5A005 /* SandstormSoftwareTestApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 183758242AA8888B00C5A005 /* Build configuration list for PBXNativeTarget "SandstormSoftwareTextApp" */;
+			buildConfigurationList = 183758242AA8888B00C5A005 /* Build configuration list for PBXNativeTarget "SandstormSoftwareTestApp" */;
 			buildPhases = (
 				183758122AA8888900C5A005 /* Sources */,
 				183758132AA8888900C5A005 /* Frameworks */,
@@ -185,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = SandstormSoftwareTextApp;
+			name = SandstormSoftwareTestApp;
 			productName = SandstormSoftwareTextApp;
-			productReference = 183758162AA8888900C5A005 /* SandstormSoftwareTextApp.app */;
+			productReference = 183758162AA8888900C5A005 /* SandstormSoftwareTestApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -205,7 +208,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 183758112AA8888900C5A005 /* Build configuration list for PBXProject "SandstormSoftwareTextApp" */;
+			buildConfigurationList = 183758112AA8888900C5A005 /* Build configuration list for PBXProject "SandstormSoftwareTestApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -218,7 +221,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				183758152AA8888900C5A005 /* SandstormSoftwareTextApp */,
+				183758152AA8888900C5A005 /* SandstormSoftwareTestApp */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				183758212AA8888B00C5A005 /* Preview Assets.xcassets in Resources */,
+				18FDAFBF2AA9BB2D00B719A8 /* .gitignore in Resources */,
 				1837581E2AA8888B00C5A005 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +248,7 @@
 				1837583E2AA8A74200C5A005 /* DetailView.swift in Sources */,
 				18FDAFBD2AA9B47200B719A8 /* SlideInFromTopTransition.swift in Sources */,
 				1837582E2AA889A600C5A005 /* MainView.swift in Sources */,
-				1837581A2AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift in Sources */,
+				1837581A2AA8888900C5A005 /* SandstormSoftwareTestAppApp.swift in Sources */,
 				183758322AA88DCD00C5A005 /* MainViewModel.swift in Sources */,
 				183758342AA88F5500C5A005 /* CustomButtonView.swift in Sources */,
 			);
@@ -374,7 +378,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SandstormSoftwareTextApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SandstormSoftwareTestApp/Preview Content\"";
 				DEVELOPMENT_TEAM = N84H63QL52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -388,7 +392,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosdev54.SandstormSoftwareTextApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdev54.SandstormSoftwareTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -403,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SandstormSoftwareTextApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SandstormSoftwareTestApp/Preview Content\"";
 				DEVELOPMENT_TEAM = N84H63QL52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -417,7 +421,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosdev54.SandstormSoftwareTextApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdev54.SandstormSoftwareTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -428,7 +432,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		183758112AA8888900C5A005 /* Build configuration list for PBXProject "SandstormSoftwareTextApp" */ = {
+		183758112AA8888900C5A005 /* Build configuration list for PBXProject "SandstormSoftwareTestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183758222AA8888B00C5A005 /* Debug */,
@@ -437,7 +441,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		183758242AA8888B00C5A005 /* Build configuration list for PBXNativeTarget "SandstormSoftwareTextApp" */ = {
+		183758242AA8888B00C5A005 /* Build configuration list for PBXNativeTarget "SandstormSoftwareTestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183758252AA8888B00C5A005 /* Debug */,

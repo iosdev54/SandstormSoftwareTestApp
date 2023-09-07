@@ -1,6 +1,6 @@
 //
 //  DetailView.swift
-//  SandstormSoftwareTextApp
+//  SandstormSoftwareTestApp
 //
 //  Created by Dmytro Grytsenko on 06.09.2023.
 //
