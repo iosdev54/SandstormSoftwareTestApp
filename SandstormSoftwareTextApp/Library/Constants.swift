@@ -8,5 +8,5 @@
 import SwiftUI
 
 enum Constants {
-    static let pandaImage: Image = Image("panda")
+    static let pandaImageName = "panda"
 }

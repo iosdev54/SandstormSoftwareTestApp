@@ -14,39 +14,14 @@ private extension Constants {
     static let padding: CGFloat = 20
 }
 
-struct SlideInFromTopTransition: ViewModifier {
-    var offsetY: CGFloat = -UIScreen.main.bounds.height
-    
-    func body(content: Content) -> some View {
-        content
-            .offset(y: offsetY)
-            .animation(.easeInOut, value: offsetY)
-    }
-}
-
-extension AnyTransition {
-    static var slideInFromTop: AnyTransition {
-        AnyTransition.modifier(
-            active: SlideInFromTopTransition(),
-            identity: SlideInFromTopTransition(offsetY: 0)
-        )
-    }
-}
-
 struct MainView: View {
     @StateObject private var viewModel = MainViewModel()
-    
-    private var lockButtonTitle: String {
-        viewModel.isOpenFromTopButtonDisabled ? "Unlock" : "Lock"
-    }
     
     var body: some View {
         ZStack {
             GeometryReader { proxy in
                 VStack {
-                    Constants.pandaImage
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
+                    pandaImage
                         .frame(width: Constants.pandaImageWidth, height: proxy.size.height * Constants.pandaImageHeightMultiplier, alignment: .leading)
                         .clipped()
                     
@@ -62,25 +37,33 @@ struct MainView: View {
                     
                     Spacer()
                     
-                    CustomButtonView(title: "Open full") {
-                        withAnimation {
-                            viewModel.isDetailViewFullPresented.toggle()
-                        }
-                    }
+                    CustomButtonView(title: "Open full", action: viewModel.openDetailViewFull)
                 }
             }
             .padding(.horizontal, Constants.padding)
             
             if viewModel.isDetailViewFromTopPresented {
                 DetailView(isDetailViewPresented: $viewModel.isDetailViewFromTopPresented)
-                    .transition(.move(edge: .top))
+                    .transition(.slideInFromTop)
+                    .zIndex(1)
             }
             
             if viewModel.isDetailViewFullPresented {
                 DetailView(isDetailViewPresented: $viewModel.isDetailViewFullPresented)
-                    .transition(.identity)
+                    .zIndex(1)
             }
         }
+        .background(.gray)
+    }
+    
+    private var lockButtonTitle: String {
+        viewModel.isOpenFromTopButtonDisabled ? "Unlock" : "Lock"
+    }
+    
+    private var pandaImage: some View {
+        Image(Constants.pandaImageName)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
     }
 }
 

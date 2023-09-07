@@ -15,6 +15,7 @@
 		183758342AA88F5500C5A005 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183758332AA88F5500C5A005 /* CustomButtonView.swift */; };
 		183758372AA890BC00C5A005 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183758362AA890BC00C5A005 /* Constants.swift */; };
 		1837583E2AA8A74200C5A005 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837583D2AA8A74200C5A005 /* DetailView.swift */; };
+		18FDAFBD2AA9B47200B719A8 /* SlideInFromTopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFBC2AA9B47200B719A8 /* SlideInFromTopTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		183758332AA88F5500C5A005 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		183758362AA890BC00C5A005 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1837583D2AA8A74200C5A005 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		18FDAFBC2AA9B47200B719A8 /* SlideInFromTopTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInFromTopTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,17 +89,9 @@
 		183758282AA8893D00C5A005 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
-				183758292AA8896900C5A005 /* Main */,
-			);
-			path = UserStories;
-			sourceTree = "<group>";
-		};
-		183758292AA8896900C5A005 /* Main */ = {
-			isa = PBXGroup;
-			children = (
 				1837582A2AA8897B00C5A005 /* TextAppBuilder */,
 			);
-			path = Main;
+			path = UserStories;
 			sourceTree = "<group>";
 		};
 		1837582A2AA8897B00C5A005 /* TextAppBuilder */ = {
@@ -147,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				183758332AA88F5500C5A005 /* CustomButtonView.swift */,
+				18FDAFBC2AA9B47200B719A8 /* SlideInFromTopTransition.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -247,6 +242,7 @@
 			files = (
 				183758372AA890BC00C5A005 /* Constants.swift in Sources */,
 				1837583E2AA8A74200C5A005 /* DetailView.swift in Sources */,
+				18FDAFBD2AA9B47200B719A8 /* SlideInFromTopTransition.swift in Sources */,
 				1837582E2AA889A600C5A005 /* MainView.swift in Sources */,
 				1837581A2AA8888900C5A005 /* SandstormSoftwareTextAppApp.swift in Sources */,
 				183758322AA88DCD00C5A005 /* MainViewModel.swift in Sources */,

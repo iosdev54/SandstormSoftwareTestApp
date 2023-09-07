@@ -8,7 +8,7 @@
 import SwiftUI
 
 private extension Constants {
-    static let dismissButtonImage = Image(systemName: "xmark")
+    static let dismissButtonSystemName = "xmark"
     static let dismissButtonSize: CGFloat = 32
     static let dismissButtonBackgroundColor: Color = .gray
     static let dismissButtonForegroundColor: Color = .white
@@ -18,33 +18,38 @@ private extension Constants {
 struct DetailView: View {
     @Binding var isDetailViewPresented: Bool
     
+    var body: some View {
+        GeometryReader { proxy in
+            ZStack(alignment: .topTrailing) {
+                pandaImage
+                    .frame(width: proxy.size.width, height: proxy.size.height, alignment: .leading)
+                
+                dismissButton
+                    .frame(width: Constants.dismissButtonSize, height: Constants.dismissButtonSize)
+                    .padding(Constants.dismissButtonPadding)
+            }
+        }
+    }
+    
+    private var pandaImage: some View {
+        Image(Constants.pandaImageName)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .ignoresSafeArea()
+    }
+    
     private var dismissButton: some View {
         Button(action: { isDetailViewPresented = false }) {
             Circle()
                 .fill(Constants.dismissButtonBackgroundColor)
                 .overlay {
-                    Constants.dismissButtonImage
+                    Image(systemName: Constants.dismissButtonSystemName)
                         .foregroundColor(Constants.dismissButtonForegroundColor)
                 }
         }
     }
-    
-    var body: some View {
-        GeometryReader { _ in
-            Constants.pandaImage
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .clipped()
-                .ignoresSafeArea()
-        }
-        .overlay(alignment: .topTrailing) {
-            dismissButton
-                .frame(width: Constants.dismissButtonSize, height: Constants.dismissButtonSize)
-                .offset(x: -Constants.dismissButtonPadding)
-        }
-    }
 }
+
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {

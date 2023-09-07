@@ -19,14 +19,8 @@ private extension Constants {
 
 struct CustomButtonView: View {
     let title: String
-    let isDisabled: Bool
+    var isDisabled: Bool = false
     let action: () -> Void
-    
-    init(title: String, isDisabled: Bool = false, action: @escaping () -> Void) {
-        self.title = title
-        self.isDisabled = isDisabled
-        self.action = action
-    }
     
     var body: some View {
         Button(action: action) {

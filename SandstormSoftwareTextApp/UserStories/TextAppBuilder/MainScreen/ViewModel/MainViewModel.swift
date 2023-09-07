@@ -17,10 +17,10 @@ final class MainViewModel: ObservableObject {
     }
     
     func openDetailViewFromTop() {
-        isDetailViewFromTopPresented.toggle()
+        isDetailViewFromTopPresented = true
     }
     
     func openDetailViewFull() {
-        isDetailViewFullPresented.toggle()
+        isDetailViewFullPresented = true
     }
 }
